@@ -26,7 +26,9 @@ class AddTask extends StatelessWidget {
               ),
             ),
           ),
-          Spacer(),
+          SizedBox(
+            height: 20,
+          ),
           SizedBox(
             width: double.infinity,
             child: FlatButton(

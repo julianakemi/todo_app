@@ -21,8 +21,14 @@ class _TasksScreenState extends State<TasksScreen> {
               borderRadius: BorderRadius.circular(20.0),
             ),
             backgroundColor: Colors.white,
+            isScrollControlled: true,
             context: context,
-            builder: (context) => AddTask(),
+            builder: (context) => SingleChildScrollView(
+                child: Container(
+              padding: EdgeInsets.only(
+                  bottom: MediaQuery.of(context).viewInsets.bottom),
+              child: AddTask(),
+            )),
           );
         },
       ),
