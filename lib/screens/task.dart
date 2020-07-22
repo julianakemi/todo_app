@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todoey_app/todo_item.dart';
 import 'package:todoey_app/screens/add_task_screen.dart';
+import 'package:todoey_app/widgets/tasks_list.dart';
 
 class TasksScreen extends StatefulWidget {
   @override
@@ -76,14 +76,7 @@ class _TasksScreenState extends State<TasksScreen> {
                     topLeft: Radius.circular(20.0),
                     topRight: Radius.circular(20.0)),
               ),
-              child: ListView(
-                padding: EdgeInsets.all(20.0),
-                children: <Widget>[
-                  TodoItem(item: 'Get milk'),
-                  TodoItem(item: 'Get eggs'),
-                  TodoItem(item: 'Get detergent'),
-                ],
-              ),
+              child: TasksList(),
             ),
           )
         ],

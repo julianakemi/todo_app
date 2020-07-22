@@ -25,7 +25,11 @@ class _TodoItemState extends State<TodoItem> {
             });
           },
         ),
-        Text(widget.item),
+        Text(
+          widget.item,
+          style: TextStyle(
+              decoration: _isSelected ? TextDecoration.lineThrough : null),
+        ),
       ],
     );
   }
