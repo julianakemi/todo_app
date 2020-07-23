@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'screens/task.dart';
+import 'package:provider/provider.dart';
+import 'screens/task_screen.dart';
+import 'package:todoey_app/models/task_data.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,8 +11,11 @@ class MyApp extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Center(
-        child: MaterialApp(
-          home: TasksScreen(),
+        child: ChangeNotifierProvider(
+          create: (context) => TaskData(),
+          child: MaterialApp(
+            home: TasksScreen(),
+          ),
         ),
       ),
     );
